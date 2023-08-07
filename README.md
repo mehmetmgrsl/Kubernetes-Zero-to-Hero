@@ -91,3 +91,17 @@ After a few mins, run the below command to verify the cluster installation.
 kops validate cluster demok8scluster.k8s.local
 ```
 
+
+### After completing your work, delete the cluster and s3 bucket:
+
+#### Delete the cluster
+
+```
+kops delete cluster --name myfirstcluster.k8s.local --yes
+```
+
+#### Delete the S3 bucket
+
+```
+aws s3 rb s3://kops-abhi-storage
+```
